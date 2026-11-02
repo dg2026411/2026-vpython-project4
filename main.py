@@ -1,1 +1,12 @@
-
+at=sphere(pos=vec (1.5,0,0),radius=1)
+that=sphere(pos=vec (0,0,0),radius=1)
+all=sphere(pos=vec (1,1,0),radius=1)
+of=sphere(pos=vec (2,1,0),radius=1)
+it=sphere(pos=vec (3,0,0),radius=1)
+cloud=compound([at,that,all,of,it])
+sphere(pos=vec (-6,4,0),radius=1)
+sphere(pos=vec (-7,4,0),radius=1)
+sphere(pos=vec (-6.5,5,0),radius=1)
+sphere(pos=vec (-7.5,5,0),radius=1)
+sphere(pos=vec (-8,4,0),radius=1)
+box(texture = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN7uqVI84vSlUmvbW3E_RwOWcwvmAx71LK7uwvm-5jvA&s=10")
