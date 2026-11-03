@@ -9,4 +9,17 @@ sphere(pos=vec (-7,4,0),radius=1)
 sphere(pos=vec (-6.5,5,0),radius=1)
 sphere(pos=vec (-7.5,5,0),radius=1)
 sphere(pos=vec (-8,4,0),radius=1)
-box(texture = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN7uqVI84vSlUmvbW3E_RwOWcwvmAx71LK7uwvm-5jvA&s=10")
+b=box(texture = "https://i.postimg.cc/gJyzG0cv/geulim1.png",pos=vec(0,-4,0))
+box(pos=vec(0,-5,0),size = vec(30,1,5))
+
+import random
+l = label(pos=vec(14,9,0))
+while True :
+    rate(100)
+    l.text = clock()
+    k = keysdown()
+    if 'left' in k :
+        b.pos.x = b.pos.x - 0.1
+    if 'right' in k :
+        b.pos.x = b.pos.x + 0.1
+
