@@ -1,8 +1,8 @@
-at=sphere(pos=vec (1.5,0,0),radius=1)
-that=sphere(pos=vec (0,0,0),radius=1)
-all=sphere(pos=vec (1,1,0),radius=1)
-of=sphere(pos=vec (2,1,0),radius=1)
-it=sphere(pos=vec (3,0,0),radius=1)
+at=sphere(pos=vec (5.5,4,0),radius=1)
+that=sphere(pos=vec (4,4,0),radius=1)
+all=sphere(pos=vec (5,5,0),radius=1)
+of=sphere(pos=vec (6,5,0),radius=1)
+it=sphere(pos=vec (7,4,0),radius=1)
 cloud=compound([at,that,all,of,it])
 sphere(pos=vec (-6,4,0),radius=1)
 sphere(pos=vec (-7,4,0),radius=1)
@@ -22,4 +22,5 @@ while True :
         b.pos.x = b.pos.x - 0.1
     if 'right' in k :
         b.pos.x = b.pos.x + 0.1
+
 
