@@ -22,5 +22,12 @@ while True :
         b.pos.x = b.pos.x - 0.1
     if 'right' in k :
         b.pos.x = b.pos.x + 0.1
-
+    g = vec(0,-9.8,0)
+    rock.v=vec(0,0,0)
+    dt=0.01
+    while rock.pos.y>=-5:
+        rock.pos=rock.pos +rock.v*dt
+        rock.v= rock.v + g*dt
+    if rock.pos.y <= -5 : 
+        rock.pos = vec(random.randint(-15,15), 2,1.5)
 
