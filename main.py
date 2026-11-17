@@ -8,7 +8,6 @@ left_eye = box(pos=vec(-0.2,-0.8,1.8), size=vec(0.2,0.2,0.1), color=color.black)
 right_eye = box(pos=vec(0.2,-0.8,1.8), size=vec(0.2,0.2,0.1), color=color.black)
 mouth = box(pos=vec(0,1.-2.2,1.8), size=vec(0.4,0.1,0.1), color=color.black)
 Human=compound([body,head,left_arm,right_arm,left_leg,right_leg,left_eye,right_eye,mouth])
-Human =(pos = vec(0,-4,1.5))
 at=sphere(pos=vec (5.5,4,0),radius=1)
 that=sphere(pos=vec (4,4,0),radius=1)
 all=sphere(pos=vec (5,5,0),radius=1)
@@ -31,16 +30,20 @@ while True :
     rate(100)
     k = keysdown()
     if 'left' in k :
-        b.pos.x = b.pos.x - 0.1
+        
+        Human.pos.x = Human.pos.x - 0.1
+        Human.axis = vec(0, 0, 1)
     if 'right' in k :
-        b.pos.x = b.pos.x + 0.1
+        Human.pos.x = Human.pos.x + 0.1
+        Human.axis = vec(0, 0, -1)
+    if 'down' in k :
+        Human.axis = vec(1, 0, 0)
 
     dt=0.01
     if rock.pos.y>=-5:
         rate(100)
         rock.pos=rock.pos +rock.v*dt
         rock.v= rock.v + g*dt
-        cloud.pos.x = cloud.pos.x + random.uniform(-1,1)
     if rock.pos.y <= -5 : 
         rock.pos = vec(random.randint(-15,15), 2,1.5)
         g = vec(0,-9.8,0)
